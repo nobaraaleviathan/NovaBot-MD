@@ -119,7 +119,7 @@ async function clearTmp() {
 setInterval(async () => {
 	var a = await clearTmp()
 	console.log(chalk.cyan(`╭━─━─━─≪🔆≫─━─━─━╮\n│SE LIMPIO LA CARPETA TMP CORRECTAMENTE\n╰━─━─━─≪🔆≫─━─━─━╯`))
-}, 60000) //1 munto
+}, 60000) //1 min
 
 async function connectionUpdate(update) {
   const { connection, lastDisconnect, isNewLogin } = update
@@ -162,14 +162,14 @@ global.reloadHandler = async function (restatConn) {
     conn.ev.off('creds.update', conn.credsUpdate)
   }
 
-  conn.welcome = '✧━━━━━━[ *WELCOME* ]━━━━━━✧\n\n┏––––––━━━━━━━━•\n│⫹⫺ @subject\n┣━━━━━━━━┅┅┅\n│( 👋 Hola @user)\n├[ *Bienvenido a* ]—\n│ @subject:*\n┗––––––━━┅┅┅\n\n––––––┅┅ *DESCRIPTION* ┅┅––––––\n@desc'
-  conn.bye = '✧━━━━━━[ *BYE* ]━━━━━━✧\nadios *@user* 👋 se fue a que un negro los violen'
-  conn.spromote = '@user hey esta de suerte eres un admin'
-  conn.sdemote = '@user ya no eres admin jj'
-  conn.sDesc = 'La descripción ha sido cambiada a \n@desc'
-  conn.sSubject = 'El nombre del grupo ha sido cambiado a \n@group'
-  conn.sIcon = 'El icono del grupo ha sido cambiado'
-  conn.sRevoke = 'El enlace del grupo ha sido cambiado a \n@revoke'
+  conn.welcome = '┏─━─━─━∞◆∞━─━─━─┓\n┆ ｡･ﾟ♡ﾟ･｡🍓｡･ﾟ♡ﾟ･｡🍒\n┆ Hola @user ¿COMO ESTAS?😃\n┆——————«•»——————\n┆ Bienvenido A @subject\n┆——————«•»——————\n┆un gusto conocerte amig@ 🤗\n┆Recuerda leer las reglas del grupo \n┆para no tener ningun problema 🧐\n┆——————«•»——————\n┆descripción:\n┆@desc\n┗◛◛◛◛◛◛◛◛◛◛◛◛┛'
+  conn.bye = '┏─━─━─━∞◆∞━─━─━─┓\n┆ ｡･ﾟ♡ﾟ･｡🍓｡･ﾟ♡ﾟ･｡🍒\n┆ adiós @user se fue\n┆ los llama sus tios😂\n┗◛◛◛◛◛◛◛◛◛◛◛◛┛'
+  conn.spromote = '@user ahora eres admin del grupo'
+  conn.sdemote = '@user joderte ya no eres admin'
+  conn.sDesc = 'La descripción del grupo fue cambiada nueva descripción es\n@desc'
+  conn.sSubject = 'El nombre del grupo fue cambiado nuevos nombre es\n@subject'
+  conn.sIcon = 'la foto del grupo fue cambiada con éxito'
+  conn.sRevoke = 'nuevos link \n@revoke'
   conn.handler = handler.handler.bind(global.conn)
   conn.participantsUpdate = handler.participantsUpdate.bind(global.conn)
   conn.groupsUpdate = handler.groupsUpdate.bind(global.conn)

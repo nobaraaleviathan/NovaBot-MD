@@ -102,7 +102,7 @@ export async function handler(chatUpdate) {
                 if (!('welcome' in chat))
                     chat.welcome = true
                 if (!('detect' in chat))
-                    chat.detect = false
+                    chat.detect = true
                 if (!('sWelcome' in chat))
                     chat.sWelcome = ''
                 if (!('sBye' in chat))
@@ -347,11 +347,11 @@ export async function handler(chatUpdate) {
                 else
                     m.exp += xp
                 if (!isPrems && plugin.diamond && global.db.data.users[m.sender].diamond < plugin.diamond * 1) {
-                    this.sendButton(m.chat, `✳️ Tus diamantes se agotaron \n use el siguiente comando para comprar más diamantes \n*${usedPrefix}buy* <cantidad> \n*${usedPrefix}buyall*`, fgig, null, [['Buy', `${usedPrefix}buy`], ['Buy All', `${usedPrefix}buyall`]], m)
+                    this.sendButton(m.chat, `ɴᴏ ᴛɪᴇɴᴇ ᴍᴀs ᴅɪᴀᴍᴀɴᴛᴇs 💎\nᴜsᴇ ᴇʟ sɪɢᴜɪᴇɴᴛᴇ ᴄᴏᴍᴀɴᴅᴏ ᴘᴀʀᴀ ᴄᴏᴍᴘʀᴀʀ ᴍᴀs ᴅɪᴀᴍᴀɴᴛᴇs\n*${usedPrefix}buy* <cantidad> \n*${usedPrefix}buyall*`, fgig, null, [['Buy', `${usedPrefix}buy`], ['Buy All', `${usedPrefix}buyall`]], m)
                     continue // Limit habis
                 }
                 if (plugin.level > _user.level) {
-                    this.reply(m.chat, `✳️ nivel requerido ${plugin.level} para usar este comando. \nTu nivel ${_user.level}`, m)
+                    this.reply(m.chat, `ɴᴇᴄᴇsɪᴛᴀ ᴇʟ ɴɪᴠᴇʟ ${plugin.level} ᴘᴀʀᴀ ᴘᴏᴅᴇʀ ᴜsᴀʀ ᴇsᴛᴇ ᴄᴏᴍᴀɴᴅᴏ\nᴛᴜ ɴɪᴠᴇʟ ᴇs ${_user.level}`, m)
                     continue // If the level has not been reached
                 }
                 let extra = {
@@ -401,7 +401,7 @@ export async function handler(chatUpdate) {
                         }
                     }
                     if (m.diamond)
-                        m.reply(`Utilizaste *${+m.diamond}* 💎`)
+                        m.reply(`*${+m.diamond}* ᴅɪᴀᴍᴀɴᴛᴇ 💎 ᴜsᴀᴅᴏ`)
                 }
                 break
             }
@@ -476,24 +476,24 @@ export async function participantsUpdate({ id, participants, action }) {
     let chat = global.db.data.chats[id] || {}
     let text = ''
     switch (action) {
-        case 'add':
+       case 'add':
         case 'remove':
             if (chat.welcome) {
-                let groupMetadata = await Connection.store.fetchGroupMetadata(id, this.groupMetadata)
+                let groupMetadata = await this.groupMetadata(id) || (conn.chats[id] || {}).metadata
                 for (let user of participants) {
-                    let pp = './src/sinfoto.jpg'
+                    let pp = './src/avatar_contact.png'
                     try {
                         pp = await this.profilePictureUrl(user, 'image')
                     } catch (e) {
                     } finally {
-                        text = (action === 'add' ? (chat.sWelcome || this.welcome || Connection.conn.welcome || 'Welcome, @user!').replace('@subject', await this.getName(id)).replace('@desc', groupMetadata.desc?.toString() || '*𝚂𝙸𝙽 𝙳𝙴𝚂𝙲𝚁𝙸𝙿𝙲𝙸𝙾𝙽*') :
-                            (chat.sBye || this.bye || Connection.conn.bye || 'Bye, @user!')).replace('@user', '@' + user.split('@')[0])
-                        this.sendButton(id, text, groupMetadata.subject, pp, [
-                        [(action == 'add' ? '𝙱𝙸𝙴𝙽𝚅𝙴𝙽𝙸𝙳𝙾' : '𝙰𝙳𝙸𝙾𝚂'), 'ura'],
-                        ['𝙼𝙴𝙽𝚄 𝙿𝚁𝙸𝙽𝙲𝙸𝙿𝙰𝙻', `#menu`]
-                        ], '',  { mentions: [user]})
-                        //this.sendFile(id, pp, 'pp.jpg', text, null, false, { mentions: [user] })
-                    }
+                    let apii = await this.getFile(pp)
+                        text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Welcome, @user!').replace('@subject', await this.getName(id)).replace('@desc', groupMetadata.desc?.toString() || '*𝚂𝙸𝙽 𝙳𝙴𝚂𝙲𝚁𝙸𝙿𝙲𝙸𝙾𝙽*') :
+                              (chat.sBye || this.bye || conn.bye || 'Bye, @user!')).replace('@user', '@' + user.split('@')[0])
+                        
+this.sendButton(id, text, groupMetadata.subject, apii.data, [[(action == 'add' ? 'ʙɪᴇɴᴠᴇɴɪᴅᴏ 👋' : ' ᴀᴅɪᴏs 🚮'), (action == 'add' ? '#welcomegc' : '#byegc')], ['🛑 ᴍᴇɴᴜ 🛑', `#menu`]], null, {mentions: this.parseMention(text)})
+                
+ //this.sendFile(id, apii.data, 'pp.jpg', text, null, false, { mentions: [user] }) 
+                   }
                 }
             }
             break
@@ -544,14 +544,18 @@ export async function deleteUpdate(message) {
         if (chat.delete)
             return
         await this.reply(msg.chat, `
-≡ Borró un mensaje  
-┌─⊷  𝘼𝙉𝙏𝙄 𝘿𝙀𝙇𝙀𝙏𝙀 
-▢ *Nombre :* @${participant.split`@`[0]} 
-└─────────────
-
-Para desactivar esta función, escriba 
-*/off antidelete*
-*.enable delete*
+╭━─━─━─≪🔴≫─━─━─━╮
+│ 🤨 ʙᴏʀʀᴏ ᴜɴ ᴍᴇɴsᴀᴊᴇ 🤨
+│◤━━━━━ ☆. ∆ .☆ ━━━━━◥
+│ 🔴 ᴀɴᴛɪ ᴅᴇʟᴇᴛᴇ 🔴
+│◤━━━━━ ☆. ∆ .☆ ━━━━━◥
+│🔸️ *ɴᴏᴍʙʀᴇ :* @${participant.split`@`[0]} 
+│◤━━━━━ ☆. ∆ .☆ ━━━━━◥
+│🔸ᴘᴀʀᴀ ᴅᴇsᴀᴄᴛɪᴠᴀʀ ᴇsᴛᴀ ᴏᴘᴄɪᴏɴ, 
+│🔸️ᴇsᴄʀɪʙɪ 
+│/off antidelete
+│#enable delete
+╰━─━─━─≪🔴≫─━─━─━╯
 `.trim(), msg, {
             mentions: [participant]
         })
@@ -563,16 +567,16 @@ Para desactivar esta función, escriba
 
 global.dfail = (type, m, conn) => {
     let msg = {
-        rowner: '✳️ESTE COMANDO SOLO LOS PUEDE USAR EL PROPIETARIO (OWNER) DEL BOT*',
-        owner: '✳️ESTE COMANDO SOLO LOS PUEDE USAR EL PROPIETARIO (OWNER) DEL BOT*',
-        mods: '🔰  ESTA COMANDO SOLO ES PARA MODERATOR Y OWNER DEL BOT',
-        premium: '💠 ESTE COMANDO ES SOLO PARA MIEMBROS PREMIUM',
-        group: '⚙️ ¡ESTE COMANDO SOLO SE PUEDE USAR EL GRUPOS!',
-        private: '📮 ESTE COMANDO SOLO SE PUEDE USAR AL CHAT PRIVADO DEL BOT',
-        admin: '🛡️ ESTE COMANDO SOLO ES PARA ADMIN DEL GRUPO',
-        botAdmin: '💥 ¡PARA USA ESTE COMANDO PRIMERO EL BOT (YO) NECESITA SER ADMIN DEL GRUPO!*',
-        unreg: '🔴HEY ALTO NO ESTA REGISTRADO 🔴\n PARA PODER USAR EL BOT NECESITA REGÍSTRARTE:\n\n*/reg nombre.edad*',
-        restrict: '🔐 ESTE COMANDO ESTA DESACTIVADO'
+        rowner: '*✳️ᴇsᴛᴇ ᴄᴏᴍᴀɴᴅᴏ sᴏʟᴏ ʟᴏs ᴘᴜᴇᴅᴇ ᴜsᴀʀ ᴇʟ ᴘʀᴏᴘɪᴇᴛᴀʀɪᴏ (ᴏᴡɴᴇʀ) ᴅᴇʟ ʙᴏᴛ*',
+        owner: '*✳️ᴇsᴛᴇ ᴄᴏᴍᴀɴᴅᴏ sᴏʟᴏ ʟᴏs ᴘᴜᴇᴅᴇ ᴜsᴀʀ ᴇʟ ᴘʀᴏᴘɪᴇᴛᴀʀɪᴏ (ᴏᴡɴᴇʀ) ᴅᴇʟ ʙᴏᴛ*',
+        mods: '🔰ᴇsᴛᴀ ᴄᴏᴍᴀɴᴅᴏ sᴏʟᴏ ᴇs ᴘᴀʀᴀ ᴍᴏᴅᴇʀᴀᴛᴏʀ ʏ ᴏᴡɴᴇʀ ᴅᴇʟ ʙᴏᴛ',
+        premium: '💠ᴇsᴛᴇ ᴄᴏᴍᴀɴᴅᴏ ᴇs sᴏʟᴏ ᴘᴀʀᴀ ᴍɪᴇᴍʙʀᴏs ᴘʀᴇᴍɪᴜᴍ',
+        group: '⚙️¡ᴇsᴛᴇ ᴄᴏᴍᴀɴᴅᴏ sᴏʟᴏ sᴇ ᴘᴜᴇᴅᴇ ᴜsᴀʀ ᴇʟ ɢʀᴜᴘᴏs!',
+        private: '📮ᴇsᴛᴇ ᴄᴏᴍᴀɴᴅᴏ sᴏʟᴏ sᴇ ᴘᴜᴇᴅᴇ ᴜsᴀʀ ᴀʟ ᴄʜᴀᴛ ᴘʀɪᴠᴀᴅᴏ ᴅᴇʟ ʙᴏᴛ',
+        admin: '🛡️ᴇsᴛᴇ ᴄᴏᴍᴀɴᴅᴏ sᴏʟᴏ ᴇs ᴘᴀʀᴀ ᴀᴅᴍɪɴ ᴅᴇʟ ɢʀᴜᴘᴏ',
+        botAdmin: '💥¡ᴘᴀʀᴀ ᴜsᴀ ᴇsᴛᴇ ᴄᴏᴍᴀɴᴅᴏ ᴘʀɪᴍᴇʀᴏ ᴇʟ ʙᴏᴛ (ʏᴏ) ɴᴇᴄᴇsɪᴛᴀ sᴇʀ ᴀᴅᴍɪɴ ᴅᴇʟ ɢʀᴜᴘᴏ!*',
+        unreg: '🔴ʜᴇʏ ᴀʟᴛᴏ ɴᴏ ᴇsᴛᴀ ʀᴇɢɪsᴛʀᴀᴅᴏ 🔴\nᴘᴀʀᴀ ᴘᴏᴅᴇʀ ᴜsᴀʀ ᴇʟ ʙᴏᴛ ɴᴇᴄᴇsɪᴛᴀ ʀᴇɢɪsᴛʀᴀʀᴛᴇ:\n\n*/reg nombre.edad*',
+        restrict: '🔐 ᴇsᴛᴇ ᴄᴏᴍᴀɴᴅᴏ ᴇsᴛᴀ ᴅᴇsᴀᴄᴛɪᴠᴀᴅᴏ'
     }[type]
     if (msg) return conn.sendButton(m.chat, msg, wm, null, [['OK', 'ok'] ], m)
 }
