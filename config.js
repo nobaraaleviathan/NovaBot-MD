@@ -55,23 +55,21 @@ global.author = 'NovaBot-MD'
 
 //━━━━━━━━━━━━━━━━━━━━ ฅ^•ﻌ•^ฅ
 
-global.fgig = 'suscribirse a nuestro canal del YouTube\n' 
-global.dygp = 'https://chat.whatsapp.com/ImKvcl3Pstb8IMZk02v692'
-global.fgsc = 'https://github.com/' 
-global.fgyt = 'https://www.youtube.com/@TheLoliBot-MD'
+global.fgig = 'https://github.com/elrebelde21/NovaBot-MD'
+ 
+global.yt = 'https://www.youtube.com/@TheLoliBot-MD'
+
 global.fgpyp = '.'
 global.fglog = 'https://i.imgur.com/Owmb93c.png' 
 
-global.vs = '1.4.5'
-global.vsJB = '2.0'
+global.vs = '1.5.0'
 
 global.lb = 'NovaBot-MD'
 global.lolibot = lb
 
-global.yt = 'https://www.youtube.com/@TheLoliBot-MD'
+global.dygp = 'https://chat.whatsapp.com/ImKvcl3Pstb8IMZk02v692'
 
 global.nna = 'https://chat.whatsapp.com/JESaesjOEcB6wnGX0QYT9o' //UPDATE
-global.nna2 = 'JESaesjOEcB6wnGX0QYT9o'
 
 global.multiplier = 69 
 global.maxwarn = '4' // máxima advertencias
