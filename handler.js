@@ -571,15 +571,15 @@ global.dfail = (type, m, conn) => {
         private: '📮 ESTE COMANDO SOLO SE PUEDE USAR AL CHAT PRIVADO DEL BOT',
         admin: '🛡️ ESTE COMANDO SOLO ES PARA ADMIN DEL GRUPO',
         botAdmin: '💥 ¡PARA USA ESTE COMANDO PRIMERO EL BOT (YO) NECESITA SER ADMIN DEL GRUPO!*',
-        unreg: '📇 Regístrese para usar esta función  Escribiendo:\n\n*/reg nombre.edad*\n\n📌Ejemplo : */reg dylux.16*',
-        restrict: '🔐 Esta característica está *deshabilitada*'
+        unreg: '🔴HEY ALTO NO ESTA REGISTRADO 🔴\n PARA PODER USAR EL BOT NECESITA REGÍSTRARTE:\n\n*/reg nombre.edad*',
+        restrict: '🔐 ESTE COMANDO ESTA DESACTIVADO'
     }[type]
-    if (msg) return conn.sendButton(m.chat, msg, fgig, null, [['🔖 OK', 'khajs'], ['⦙☰ Menu', '/menu'] ], m)
+    if (msg) return conn.sendButton(m.chat, msg, wm, null, [['OK', 'ok'] ], m)
 }
 
 let file = global.__filename(import.meta.url, true)
 watchFile(file, async () => {
     unwatchFile(file)
-    console.log(chalk.magenta("✅  Se actualizo 'handler.js'"))
+    console.log(chalk.magenta("Se actualizo 'handler.js'"))
     if (global.reloadHandler) console.log(await global.reloadHandler())
 }) 

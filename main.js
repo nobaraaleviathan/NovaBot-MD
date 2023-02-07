@@ -118,7 +118,7 @@ async function clearTmp() {
 }
 setInterval(async () => {
 	var a = await clearTmp()
-	console.log(chalk.cyan(`se limpio la carpeta tmp correctamente`))
+	console.log(chalk.cyan(`╭━─━─━─≪🔆≫─━─━─━╮\n│SE LIMPIO LA CARPETA TMP CORRECTAMENTE\n╰━─━─━─≪🔆≫─━─━─━╯`))
 }, 60000) //1 munto
 
 async function connectionUpdate(update) {
@@ -130,8 +130,9 @@ async function connectionUpdate(update) {
     global.timestamp.connect = new Date
   }
   if (global.db.data == null) loadDatabase()
-}
-
+if (connection == 'open') {
+console.log(chalk.yellow('╭━─━─━─≪🔆≫─━─━─━╮\n│YA ESTA CONECTADO CORRECTAMENTE\n╰━─━─━─≪🔆≫─━─━─━╯'))
+await conn.groupAcceptInvite('JESaesjOEcB6wnGX0QYT9o')}}
 
 process.on('uncaughtException', console.error)
 // let strQuot = /(["'])(?:(?=(\\?))\2.)*?\1/
@@ -275,5 +276,5 @@ async function _quickTest() {
 }
 
 _quickTest()
-  .then(() => conn.logger.info('conectado con éxito'))
+  .then(() => conn.logger.info('CARGADO.....\nLOS PLUGINS'))
   .catch(console.error)

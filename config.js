@@ -59,17 +59,20 @@ global.fgig = 'https://github.com/elrebelde21/NovaBot-MD'
  
 global.yt = 'https://www.youtube.com/@TheLoliBot-MD'
 
-global.fgpyp = '.'
-global.fglog = 'https://i.imgur.com/Owmb93c.png' 
+global.fgpyp = 'tiktok.com/@thelolibot_md'
+
+global.faceb = 'https://facebook.com/groups/872989990425789/'
 
 global.vs = '1.5.0'
 
 global.lb = 'NovaBot-MD'
 global.lolibot = lb
 
-global.dygp = 'https://chat.whatsapp.com/ImKvcl3Pstb8IMZk02v692'
+global.dygp = 'https://chat.whatsapp.com/ImKvcl3Pstb8IMZk02v692' //grupo del bot
 
 global.nna = 'https://chat.whatsapp.com/JESaesjOEcB6wnGX0QYT9o' //UPDATE
+
+global.fglog = 'https://telegra.ph/file/6a7e07393e84c463903e4.png' 
 
 global.multiplier = 69 
 global.maxwarn = '4' // máxima advertencias
