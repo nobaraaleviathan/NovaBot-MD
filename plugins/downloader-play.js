@@ -16,7 +16,7 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
 │║
 │║        *████████████┃%100*
 ╰─•┈┈┈•••✦𝒟ℳ✦•••┈┈┈•─╯⟤`
- await conn.sendButton(m.chat, play, fgig, thumbnail, [
+ await conn.sendButton(m.chat, play, lb, thumbnail, [
     ['AUDIO', `${usedPrefix}fgmp3 ${url}`],
     ['VIDEO', `${usedPrefix}fgmp4 ${url}`]
   ], m, rpl)
