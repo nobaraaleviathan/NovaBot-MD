@@ -1,12 +1,7 @@
 {
-  "name": "NovaBot-MD",
-  "description": "Lightweight WhatsApp Bot",
-  "repository": "https://github.com/elrebelde21/NovaBot-MD",
-  "logo": "https://node-js-sample.herokuapp.com/node.png",
-  "keywords": [
-    "bot",
-    "whatsapp",
-    "multi-device",
-    "whatsapp-bot"
-  ]
+  "name": "dylux-fg",
+  "description": "Customizable WhatsApp Bot",
+  "repository": "https://github.com/FG98F/dylux-fg",
+  "logo": "https://i.ibb.co/dG6rm49/fg-logo.png",
+  "keywords": ["bot", "whatsapp", "whatsapp-bot", "rpg", "dylux-bot-md", "dylux-bot"]
 }

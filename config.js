@@ -1,126 +1,105 @@
-//=============『 owner 』================== //
-global.owner = ['5492266466080' , '524531106422'] 
-global.mods = [] 
-global.prems = [] 
+import { watchFile, unwatchFile } from 'fs'
+import chalk from 'chalk'
+import { fileURLToPath } from 'url'
 
-//=============『 Info Owner 』============== //
-global.nameowner = 'creador'
-global.numberowner = '5492266466080' , '524531106422'
-global.instagram = ''
-global.github = 'https://github.com/elrebelde21/NovaBot-MD'
-global.dana = '087892711054'
-global.pulsa = '085212023766'
-global.gopay = '087892711054'
+global.owner = [
+  ['56964787183', 'NovaBot-MD', true],
+  ['5492266466080'], 
+  ['524531173598'] 
+] //Numeros de owner 
 
-//=============『 Info Bot 』=================//
-global.namebot = 'NovaBot-MD'
-global.gc = 'bit.ly/AnyaBot-Group'
-global.web = 'https://github.com/Hyzerr' //conviértalo en su sitio web, puede vincular ig, vincular github, vincular yt, si el enlace es gc, la visualización volverá a ser diferente.
-global.price1 = '1 bulan = 10.000\n2 Minggu 7.000\n1 Minggu 5.000'
+//━━━━━━━━━━━━━━━━━━━━ ฅ^•ﻌ•^ฅ
 
-//=======『 Pantalla y más 』============//
-global.fotonya1 = 'https://telegra.ph/file/e4a2f4339da8a32ad20a1.jpg' //cambia a tu foto de bot
-global.fotonya2 = 'https://telegra.ph/file/8c471d45b6cedad43cf84.jpg' //cambiar esto también
-global.lolkey = 'Papah-Chan' //asi que es facil remplazarlo, por ejemplo el apikey esta caducado :v
-global.zenzkey = 'BagasPrdn' //cambiar a su apikey si caduca
-global.wm = 'NovaBot-MD'
-global.watermark = wm
-global.wm2 = '                     「 NovaBot-MD⁩ 」'
-global.wm3 = 'superbot-𝙼𝙳'
-global.htki = '––––––『' 
-global.htka = '』––––––'
-global.media = 'https://telegra.ph/file/fed1c9d94b37511e570d5.mp4'
-global.fla = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=smurfs-logo&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&text='
-global.wait = '_*espere unos minutos...*_'
-global.eror = '_*Error*_'
-global.benar = 'verdad ✅\n'
-global.salah = 'falso ❌\n'
-global.stiker_wait = 'Stiker'
-global.packname = 'toma tu sticker'
-global.author = '©NovaBot-MD'
+global.mods = ['50495745934'] 
+global.prems = ['595986172767', '5493704555464']
 
-//=============『 Apikey 』================== //
-global.APIs = { // API Prefix
-  // name: 'https://website'
-  amel: 'https://melcanz.com',
-    bx: 'https://bx-hunter.herokuapp.com',
-  dhnjing: 'https://dhnjing.xyz',
-  hardianto: 'https://hardianto-chan.herokuapp.com',
-  jonaz: 'https://jonaz-api-v2.herokuapp.com',
-  neoxr: 'https://neoxr-api.herokuapp.com',
-  nrtm: 'https://nurutomo.herokuapp.com',
-  xteam: 'https://api.xteam.xyz',
-  nzcha: 'http://nzcha-apii.herokuapp.com',
+//━━━━━━━━━━━━━━━━━━━━ ฅ^•ﻌ•^ฅ
+
+global.keysZens = ['c2459db922', '37CC845916', '6fb0eff124']
+// 'fiktod' 'BF39D349845E' '675e34de8a' '0b917b905e6f'
+global.keysxxx = keysZens[Math.floor(keysZens.length * Math.random())]
+global.keysxteammm = ['29d4b59a4aa687ca', '5LTV57azwaid7dXfz5fzJu', 'cb15ed422c71a2fb', '5bd33b276d41d6b4', 'HIRO', 'kurrxd09', 'ebb6251cc00f9c63']
+global.keysxteam = keysxteammm[Math.floor(keysxteammm.length * Math.random())]
+global.keysneoxrrr = ['5VC9rvNx', 'cfALv5']
+global.keysneoxr = keysneoxrrr[Math.floor(keysneoxrrr.length * Math.random())]
+global.lolkeysapi = ['BrunoSobrino']
+
+global.APIs = { 
+  xteam: 'https://api.xteam.xyz', 
+  nrtm: 'https://fg-nrtm-nhie.onrender.com',
   bg: 'http://bochil.ddns.net',
-  fdci: 'https://api.fdci.se',
+  fgmods: 'https://api-fgmods.ddns.net',
   dzx: 'https://api.dhamzxploit.my.id',
-  bsbt: 'https://bsbt-api-rest.herokuapp.com',
-  zahir: 'https://zahirr-web.herokuapp.com',
-  zeks: 'https://api.zeks.xyz',
-  zekais: 'http://zekais-api.herokuapp.com',
-  hardianto: 'https://hardianto-chan.herokuapp.com',
-  pencarikode: 'https://pencarikode.xyz', 
-  erdwepe: 'https://erdwpe-api.herokuapp.com',
-  lolhuman: 'https://api.lolhuman.xyz',
-  LeysCoder: 'https://leyscoders-api.herokuapp.com',
-  rey: 'https://server-api-rey.herokuapp.com'
-}
-global.APIKeys = { // APIKey Here
-  // 'https://website': 'apikey'
-  'https://melcanz.com': 'elaina',
-  'https://server-api-rey.herokuapp.com': 'apirey',
-  'https://api.xteam.xyz': 'd37372311698ed1d',
-  'https://zahirr-web.herokuapp.com': 'zahirgans',
-  'https://bsbt-api-rest.herokuapp.com': 'benniismael',
-  'https://api.zeks.xyz': 'apivinz',
-  'https://hardianto-chan.herokuapp.com': 'hardianto',
-  'https://pencarikode.xyz': 'pais', 
-  'https://leyscoders-api.herokuapp.com': 'dappakntlll',
-  'https://zekais-api.herokuapp.com': 'apikeymu',
-  'https://api.lolhuman.xyz': 'Deffbotz',
+  lol: 'https://api.lolhuman.xyz',
+  violetics: 'https://violetics.pw',
+  neoxr: 'https://api.neoxr.my.id',
+  zenzapis: 'https://zenzapis.xyz',
+  akuari: 'https://api.akuari.my.id',
+  akuari2: 'https://apimu.my.id',	
+  fgmods: 'https://api-fgmods.ddns.net'
+},
+global.APIKeys = { 
+  'https://api.xteam.xyz': `${keysxteam}`,
+  'https://api.lolhuman.xyz': '85faf717d0545d14074659ad',
+  'https://api.neoxr.my.id': `${keysneoxr}`,	
+  'https://violetics.pw': 'beta',
 }
 
-//=============『 JUEGOS | GAMES 』================== //
-global.multiplier = 69 // Cuanto más alto, más difícil subir de nivel
-global.rpg = {
-  emoticon(string) {
-    string = string.toLowerCase()
-    let emot = {
-      exp: '✉️',
-      money: '💵',
-      potion: '🥤',
-      diamond: '💎',
-      common: '📦',
-      uncommon: '🎁',
-      mythic: '🗳️',
-      legendary: '🗃️',
-      pet: '🎁',
-      sampah: '🗑',
-      armor: '🥼',
-      sword: '⚔️',
-      kayu: '🪵',
-      batu: '🪨',
-      string: '🕸️',
-      kuda: '🐎',
-      kucing: '🐈' ,
-      anjing: '🐕',
-      petFood: '🍖',
-      gold: '👑',
-      emerald: '💚'
-    }
-    let results = Object.keys(emot).map(v => [v, new RegExp(v, 'gi')]).filter(v => v[1].test(string))
-    if (!results.length) return ''
-    else return emot[results[0][0]]
-  }
-}
+global.imagen1 = ['./media/menu1.jpg']
 
-//===========『 No cambies 』================ //
-let fs = require('fs')
-let chalk = require('chalk')
-let file = require.resolve(__filename)
-fs.watchFile(file, () => {
-  fs.unwatchFile(file)
+//━━━━━━━━━━━━━━━━━━━━ ฅ^•ﻌ•^ฅ
+
+// Sticker WM
+global.packname = 'NovaBot-MD'
+global.author = 'NovaBot-MD'
+
+//━━━━━━━━━━━━━━━━━━━━ ฅ^•ﻌ•^ฅ
+
+global.fgig = 'suscribirse a nuestro canal del YouTube\n' 
+global.dygp = 'https://chat.whatsapp.com/ImKvcl3Pstb8IMZk02v692'
+global.fgsc = 'https://github.com/' 
+global.fgyt = 'https://www.youtube.com/@TheLoliBot-MD'
+global.fgpyp = '.'
+global.fglog = 'https://i.imgur.com/Owmb93c.png' 
+
+global.vs = '1.4.5'
+global.vsJB = '2.0'
+
+global.lb = 'NovaBot-MD'
+global.lolibot = lb
+
+global.yt = 'https://www.youtube.com/@TheLoliBot-MD'
+
+global.nna = 'https://chat.whatsapp.com/JESaesjOEcB6wnGX0QYT9o' //UPDATE
+global.nna2 = 'JESaesjOEcB6wnGX0QYT9o'
+
+global.multiplier = 69 
+global.maxwarn = '4' // máxima advertencias
+
+//━━━━━━━━━━━━━━━━━━━━ ฅ^•ﻌ•^ฅ
+
+global.wm = 'NovaBot-MD'
+global.wait = '*⌛ _Cargando..._*\n*▰▰▰▱▱▱▱▱*'
+global.rwait = '⌛'
+global.dmoji = '🤭'
+global.done = '✅'
+global.error = '❌' 
+global.xmoji = '🔥' 
+
+//━━━━━━━━━━━━━━━━━━━━ ฅ^•ﻌ•^ฅ
+
+global.flaaa = [
+'https://flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=water-logo&script=water-logo&fontsize=90&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextColor=%23000&shadowGlowColor=%23000&backgroundColor=%23000&text=',
+'https://flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=crafts-logo&fontsize=90&doScale=true&scaleWidth=800&scaleHeight=500&text=',
+'https://flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=amped-logo&doScale=true&scaleWidth=800&scaleHeight=500&text=',
+'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextType=1&fillTextPattern=Warning!&text=',
+'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextType=1&fillTextPattern=Warning!&fillColor1Color=%23f2aa4c&fillColor2Color=%23f2aa4c&fillColor3Color=%23f2aa4c&fillColor4Color=%23f2aa4c&fillColor5Color=%23f2aa4c&fillColor6Color=%23f2aa4c&fillColor7Color=%23f2aa4c&fillColor8Color=%23f2aa4c&fillColor9Color=%23f2aa4c&fillColor10Color=%23f2aa4c&fillOutlineColor=%23f2aa4c&fillOutline2Color=%23f2aa4c&backgroundColor=%23101820&text=']
+
+//━━━━━━━━━━━━━━━━━━━━ ฅ^•ﻌ•^ฅ
+
+let file = fileURLToPath(import.meta.url)
+watchFile(file, () => {
+  unwatchFile(file)
   console.log(chalk.redBright("Update 'config.js'"))
-  delete require.cache[file]
-  require(file)
+  import(`${file}?update=${Date.now()}`)
 })
