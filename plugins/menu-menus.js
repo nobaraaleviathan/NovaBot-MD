@@ -14,7 +14,7 @@ let tags = {
   'prem': 'PREMIUM',
   'group': 'GRUPO',
   'nable': 'OPCIONES PARA ACTIVA Y DESACTIVA', 
-  'dl': 'DESCARGAS',
+  'downloader': 'DESCARGAS',
   'tools': 'HERRAMIENTA',
   'fun': 'FUN',
   'cmd': 'DATABASE',
