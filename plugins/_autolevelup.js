@@ -10,15 +10,15 @@ export async function before(m, { conn }) {
         user.level++
     user.role = global.rpg.role(user.level).name
     if (before !== user.level) {
-        m.reply(`╭━─━─━─≪🔆≫─━─━─━╮
-│☞ FELICIDADES 👏 SUBISTE DEL NIVEL
+    conn.sendButton(m.chat, '🤑 ' + wm, `╭━─━─━─≪🔆≫─━─━─━╮
+│☞ FELICIDADES 👏 HAS ALCANZADO UN NUEVO NIVEL
 │◤━━━━━ ☆. ∆ .☆ ━━━━━◥
-│☞ Nivel anterios: ${before}
+│☞ NIVEL ANTERIOR: ${before}
 │◤━━━━━ ☆. ∆ .☆ ━━━━━◥
-│☞ Nivel actual: ${user.level}
+│☞ NIVEL ACTUAL: ${user.level}
 │◤━━━━━ ☆. ∆ .☆ ━━━━━◥
-│☞ Rango : ${user.role}
-╰━─━─━─≪🔆≫─━─━─━╯`.trim())
-    }
-}
-
+│☞ RANGO : ${user.role}
+│◤━━━━━ ☆. ∆ .☆ ━━━━━◥
+│☞ FECHA: ${new Date().toLocaleString('id-ID')}
+╰━─━─━─≪🔆≫─━─━─━╯ׂ`, null, [['✳️MENU', `/menu`]], m)
+}}		
