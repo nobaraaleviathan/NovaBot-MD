@@ -1,11 +1,8 @@
 let handler = async (m, { conn, text, command, usedPrefix, args }) => {
 let pp = 'https://www.bighero6challenge.com/images/thumbs/Piedra,-papel-o-tijera-0003318_1584.jpeg'
 await conn.sendPresenceUpdate('composing', m.chat)
-if (!args[0]) throw conn.sendHydrated(m.chat, 'ᴘɪᴇᴅʀᴀs, ᴘᴀᴘᴇʟ, ᴏ ᴛɪᴊᴇʀᴀ\nᴘᴜᴇᴅᴇ ᴜsᴀʀ ʟᴏs ʙᴏᴛᴏɴᴇs ᴘᴀʀᴀ ᴊᴜɢᴀʀ ᴏ ᴛᴀᴍʙɪᴇɴ ᴘᴜᴇᴅᴇ ᴜsᴀʀ ᴇsᴛᴏs ᴄᴏᴍᴀɴᴅᴏ\n.ppt 𝙥𝙞𝙚𝙙𝙧𝙖\n.ppt 𝙥𝙖𝙥𝙚𝙡\n.ppt 𝙩𝙞𝙟𝙚𝙧𝙖\n\nᴜsᴇ ᴇɴ ᴍɪɴᴜsᴄᴜʟᴀs ', pp, null, null, null, null, [
-['𝙋𝙞𝙚𝙙𝙧𝙖 🥌', `${usedPrefix + command} piedra`],
-['𝙥𝙖𝙥𝙚𝙡 📄', `${usedPrefix + command} papel`],
-['𝙩𝙞𝙟𝙚𝙧𝙖 ✂️', `${usedPrefix + command} tijera`]
-], m)
+let reseqv = `🥌ᴘɪᴇᴅʀᴀs, 📄ᴘᴀᴘᴇʟ, ᴏ ✂️ᴛɪᴊᴇʀᴀ\nᴘᴜᴇᴅᴇ ᴜsᴀʀ ᴇsᴛᴏs ᴄᴏᴍᴀɴᴅᴏ\n🥌.ppt piedra\n📄 .ppt papel\n✂️.ppt tijera\n\nᴜsᴇ ᴇɴ ᴍɪɴᴜsᴄᴜʟᴀs\n\nEjemplo : *${usedPrefix + command}* papel\n`
+    if (!text) throw reseqv
 var astro = Math.random()
 if (astro < 0.34) {
 astro = 'piedra' 

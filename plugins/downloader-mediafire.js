@@ -29,7 +29,7 @@ ${isLimit ? `\n▢ El archivo supera el límite de descarga *+${limit} MB*\nPás
     m.react(done)
 }
 handler.help = ['mediafire <url>']
-handler.tags = ['dl', 'prem']
+handler.tags = ['downloader']
 handler.command = ['mediafire', 'mfire'] 
 handler.diamond = true
 handler.premium = false

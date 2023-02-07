@@ -25,5 +25,6 @@ await conn.sendMessage(m.chat, { document: { url: n2 }, caption: cap2, mimetype:
 } catch {
 await conn.reply(m.chat, '*[❗] 𝙴𝚁𝚁𝙾𝚁 𝙽𝙾 𝙵𝚄𝙴 𝙿𝙾𝚂𝙸𝙱𝙻𝙴 𝙳𝙴𝚂𝙲𝙰𝚁𝙶𝙰𝚁 𝙴𝙻 𝚅𝙸𝙳𝙴𝙾*', m)}
 }}
+handler.tags = ['downloader']
 handler.command = /^ytmp4doc|ytvdoc|ytmp4.2|ytv.2$/i
 export default handler

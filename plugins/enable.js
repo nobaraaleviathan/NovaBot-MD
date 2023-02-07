@@ -215,8 +215,8 @@ const listMessage = {
 */
 
 m.reply(`
-✅ *${type}* Se *${isEnable ? 'Activó' : 'Desactivó'}* ${isAll ? 'para este bot' : isUser ? '' : 'para este chat'}
-`.trim()) 
+el comando *${type}* Se *${isEnable ? 'Activó' : 'Desactivó'}* ${isAll ? 'para este bot' : isUser ? '' : 'para este chat'}
+con éxitos ✅`.trim()) 
 
 }
 handler.help = ['en', 'dis'].map(v => v + 'able <option>')

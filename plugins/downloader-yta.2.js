@@ -24,5 +24,6 @@ await conn.sendMessage(m.chat, { document: { url: n2 }, caption: cap2, mimetype:
 } catch {
 await conn.reply(m.chat, '*[❗] 𝙴𝚁𝚁𝙾𝚁 𝙽𝙾 𝙵𝚄𝙴 𝙿𝙾𝚂𝙸𝙱𝙻𝙴 𝙳𝙴𝚂𝙲𝙰𝚁𝙶𝙰𝚁 𝙴𝙻 𝙰𝚄𝙳𝙸𝙾*', m)}
 }}
+handler.tags = ['downloader']
 handler.command = /^ytmp3doc|ytadoc|ytmp3.2|yta.2$/i
 export default handler

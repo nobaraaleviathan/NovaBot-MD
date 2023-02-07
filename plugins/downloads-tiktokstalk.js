@@ -21,7 +21,7 @@ try {
 }
 }
 handler.help = ['tiktokstalk']
-handler.tags = ['dl']
+handler.tags = ['downloader']
 handler.command = /^t(tstalk|iktokstalk)$/i
 
 export default handler

@@ -14,10 +14,10 @@ let handler = async(m, { conn, usedPrefix, text, args, command }) => {
           ['🎥 VIDEO', `${usedPrefix}fgmp4 ${v.url}`, `▢ ⌚ *Duración:* ${v.timestamp}\n▢ 👀 *Vistas:* ${v.views}\n▢ 📌 *Título* : ${v.title}\n▢ 📆 *Publicado:* ${v.ago}\n`]
         ]])
 	})
-	return conn.sendList(m.chat, '  ≡ *Buscado 🔎', `\n 📀 Aqui una lista de resultados de :\n *${text}*`, fgig, `Click Aquí `, listSections, m)
+	return conn.sendList(m.chat, '  ≡ *Buscado 🔎', `\n 📀 Aqui una lista de resultados de :\n *${text}*`, fgig, `selecciones aqui`, listSections, m)
 }
 handler.help = ['play2']
-handler.tags = ['dl']
+handler.tags = ['downloader']
 handler.command = ['play2', 'playvid2', 'playlist', 'playlista'] 
 
 export default handler
