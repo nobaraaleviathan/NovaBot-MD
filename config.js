@@ -72,7 +72,7 @@ global.dygp = 'https://chat.whatsapp.com/ImKvcl3Pstb8IMZk02v692' //grupo del bot
 
 global.nna = 'https://chat.whatsapp.com/JESaesjOEcB6wnGX0QYT9o' //UPDATE
 
-global.fglog = 'https://telegra.ph/file/6a7e07393e84c463903e4.png' 
+global.fglog = 'https://telegra.ph/file/1861aab98389b13db8588.png' 
 
 global.multiplier = 69 
 global.maxwarn = '4' // máxima advertencias
