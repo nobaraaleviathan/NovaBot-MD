@@ -7,10 +7,13 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
 	try {
 	let res = await fg.GDriveDl(args[0])
 	 await m.reply(`
-≡ *Google Drive DL*
-▢ *Nombre:* ${res.fileName}
-▢ *Tamaño:* ${res.fileSize}
-▢ *tipo:* ${res.mimetype}`)
+╭━─━─━─≪≫─━─━─━╮
+│ ≡ *Google Drive DL*
+│——————«•»——————
+│🔸 *Nombre:* ${res.fileName}
+│🔸 *Tamaño:* ${res.fileSize}
+│🔸 *tipo:* ${res.mimetype}
+╰━─━─━─≪≫─━─━─━╯`)
 		
 	conn.sendMessage(m.chat, { document: { url: res.downloadUrl }, fileName: res.fileName, mimetype: res.mimetype }, { quoted: m })
 	m.react(done)
