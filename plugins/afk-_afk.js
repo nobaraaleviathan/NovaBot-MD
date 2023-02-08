@@ -4,10 +4,11 @@ export function before(m) {
     let user = global.db.data.users[m.sender]
     if (user.afk > -1) {
         m.reply(`
-  ✅ DEJASTE DE ESTA AFK
-${user.afkReason ? ' \n▢ *RAZON :* ' + user.afkReason : ''}
-▢ *ESTUVO INACTIVO DURANTE:* ${(new Date - user.afk).toTimeString()}
-  `.trim())
+╭━─━─━─≪☣️≫─━─━─━╮
+┃DEJASTE DE ESTA AFK
+┃${user.afkReason ? '\n┃🔸️ *RAZON :* ' + user.afkReason : ''}
+┃🔸 *ESTUVO INACTIVO DURANTE:* ${(new Date - user.afk).toTimeString()}
+╰━─━─━─≪🔴≫─━─━─━╯`.trim())
         user.afk = -1
         user.afkReason = ''
     }

@@ -5,11 +5,14 @@ let handler = async (m, { text, conn }) => {
     user.afk = + new Date
     user.afkReason = text
     m.reply(`
-  😴 AKF 
- ESTE USUARIOS ${conn.getName(m.sender)} ESTA INACTIVO. 
-☣️ NO LOS ETIQUETE ☣️ 
-☣️ MOTIVOS: ${text ? text : ''}
-  `)
+╭━─━─━─≪☣️≫─━─━─━╮
+┃ 😴 AKF 
+┃ ESTE USUARIOS ${conn.getName(m.sender)}  
+┃ ESTA INACTIVO. 
+┃ ≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋
+┃ ☣️ NO LOS ETIQUETE ☣️ 
+┃ ☣️ MOTIVOS: ${text ? text : ''}
+╰━─━─━─≪☣️≫─━─━─━╯ `)
 }
 handler.help = ['afk <razon>']
 handler.tags = ['fun']
