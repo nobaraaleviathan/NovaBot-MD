@@ -5,10 +5,10 @@ export function before(m) {
     if (user.afk > -1) {
         m.reply(`
 ╭━─━─━─≪☣️≫─━─━─━╮
-┃DEJASTE DE ESTA AFK
-┃${user.afkReason ? '\n┃🔸️ *RAZON :* ' + user.afkReason : ''}
-┃🔸 *ESTUVO INACTIVO DURANTE:* ${(new Date - user.afk).toTimeString()}
-╰━─━─━─≪🔴≫─━─━─━╯`.trim())
+┃𝙳𝙴𝙹𝙰𝚂𝚃𝙴 𝙳𝙴 𝙴𝚂𝚃𝙰 𝙰𝙵𝙺
+┃${user.afkReason ? '\n┃🔸️ *𝚁𝙰𝚉𝙾𝙽 :* ' + user.afkReason : ''}
+┃🔸 *𝙴𝚂𝚃𝚄𝚅𝙾 𝙸𝙽𝙰𝙲𝚃𝙸𝚅𝙾 𝙳𝚄𝚁𝙰𝙽𝚃𝙴* ${(new Date - user.afk).toTimeString()}
+╰━─━─━─≪☣️≫─━─━─━╯`.trim())
         user.afk = -1
         user.afkReason = ''
     }
@@ -22,10 +22,11 @@ export function before(m) {
             continue
         let reason = user.afkReason || ''
         m.reply(`
-💤 El usuario que mencionas está AFK 
+💤 𝙽𝙾 𝙻𝙾𝚂 𝙴𝚃𝙸𝚀𝚄𝙴𝚃𝙴 💤
+𝙴𝚜𝚝𝚎 𝚞𝚜𝚞𝚊𝚛𝚒𝚘 𝚚𝚞𝚎 𝚖𝚎𝚗𝚌𝚒𝚘𝚗𝚊𝚜 𝚎𝚜𝚝𝚊 𝙰𝙵𝙺  
 
-${reason ? '▢ *Razón* : ' + reason : '▢ *Razón* : Sin razón'}
-▢ *ESTUVO INACTIVO DURANTE :* ${(new Date - afkTime).toTimeString()}
+${reason ? '🔸️ *𝚁𝙰𝚉𝙾𝙽* : ' + reason : '🔸️ *𝚁𝙰𝚉𝙾𝙽* : 𝚂𝚒𝚗 𝚛𝚊𝚣𝚘𝚗'}
+🔸️ *𝙴𝚂𝚃𝚄𝚅𝙾 𝙸𝙽𝙰𝙲𝚃𝙸𝚅𝙾 𝙳𝚄𝚁𝙰𝙽𝚃𝙴 :* ${(new Date - afkTime).toTimeString()}
   `.trim())
     }
     return true

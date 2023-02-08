@@ -4,14 +4,14 @@ let handler = async (m, { text, conn }) => {
     let user = global.db.data.users[m.sender]
     user.afk = + new Date
     user.afkReason = text
-    m.reply(`
+    m.reply(` 
 ╭━─━─━─≪☣️≫─━─━─━╮
-┃ 😴 AKF 
-┃ ESTE USUARIOS ${conn.getName(m.sender)}  
-┃ ESTA INACTIVO. 
+┃ 😴 𝙰𝙺𝙵 
+┃ 𝙴𝚂𝚃𝙴 𝚄𝚂𝚄𝙰𝚁𝙸𝙾𝚂 ${conn.getName(m.sender)}  
+┃ 𝙴𝚂𝚃𝙰 𝙸𝙽𝙰𝙲𝚃𝙸𝚅𝙾. 
 ┃ ≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋
-┃ ☣️ NO LOS ETIQUETE ☣️ 
-┃ ☣️ MOTIVOS: ${text ? text : ''}
+┃ 💤 𝙽𝙾 𝙻𝙾𝚂 𝙴𝚃𝙸𝚀𝚄𝙴𝚃𝙴 💤
+┃ ☣️ 𝙼𝙾𝚃𝙸𝚅𝙾𝚂 : ${text ? text : ''}
 ╰━─━─━─≪☣️≫─━─━─━╯ `)
 }
 handler.help = ['afk <razon>']
