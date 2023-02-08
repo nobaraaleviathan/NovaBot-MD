@@ -5,9 +5,9 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
     }[(args[0] || '')]
     if (isClose === undefined)
         throw `
-*✳️ Elija una opción:*
-  *▢ ${usedPrefix + command} close*
-  *▢ ${usedPrefix + command} open*
+*✳️ ELIGIR UNA OPCIÓN*
+  *🔸️ ${usedPrefix + command} close*
+  *🔸️ ${usedPrefix + command} open*
 `.trim()
     await conn.groupSettingUpdate(m.chat, isClose)
 }
