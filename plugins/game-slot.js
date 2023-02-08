@@ -3,9 +3,9 @@ let reg = 40
 let handler = async (m, { conn, args, usedPrefix, command }) => {
 await conn.sendPresenceUpdate('composing', m.chat)
     let fa = `
-Cuanto quieres apostar? 
+𝙲𝚞𝚊𝚗𝚝𝚘 𝚚𝚞𝚒𝚎𝚛𝚎𝚜 𝚊𝚙𝚘𝚜𝚝𝚊𝚛? 
 
-📌 Ejemplo :
+📌 𝙴𝚓𝚎𝚖𝚙𝚕𝚘 :
 *${usedPrefix + command}* 100`.trim()
     if (!args[0]) throw fa
     if (isNaN(args[0])) throw fa
@@ -13,9 +13,9 @@ Cuanto quieres apostar?
     let users = global.db.data.users[m.sender]
     let time = users.lastslot + 10000
     if (new Date - users.lastslot < 10000) throw `⏳ Espere *${msToTime(time - new Date())}* para volver aposta`
-    if (apuesta < 100) throw '✳️ Mínimo de la apuesta es *100 XP*'
+    if (apuesta < 100) throw '✳️ 𝙼𝚒𝚗𝚒𝚖𝚘 𝚍𝚎 𝚕𝚊 𝚊𝚙𝚞𝚎𝚜𝚝𝚊 𝚎𝚜 *100 XP*'
     if (users.exp < apuesta) {
-        throw `✳️ No tienes suficiente XP`
+        throw `✳️ 𝙽𝚘 𝚝𝚒𝚎𝚗𝚎𝚜 𝚜𝚞𝚏𝚒𝚌𝚒𝚎𝚗𝚝𝚎 𝚇𝙿`
     }
 
     let emojis = ["🕊️", "🦀", "🦎"];

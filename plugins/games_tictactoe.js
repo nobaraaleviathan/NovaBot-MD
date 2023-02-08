@@ -61,16 +61,16 @@ export async function before(m) {
         }
         let winner = isSurrender ? room.game.currentTurn : room.game.winner
         let str = `
-${isWin ? `@${winner.split('@')[0]} HAS GANADOS 🎉 *+${winScore} XP*` : isTie ? `EMPARTE 🤨 *+${playScore} XP*` : `ES TU TURNO ${['❎', '⭕'][1 * room.game._currentTurn]} (@${room.game.currentTurn.split('@')[0]})`} 
+${isWin ? `@${winner.split('@')[0]} HAS GANADOS 🎉 *+${winScore} XP*` : isTie ? `EMPARTE 🤨 *+${playScore} XP*` : `ᴇs ᴛᴜ ᴛᴜʀɴᴏ ${['❎', '⭕'][1 * room.game._currentTurn]} (@${room.game.currentTurn.split('@')[0]})`} 
 
 ${arr.slice(0, 3).join('')}
 ${arr.slice(3, 6).join('')}
 ${arr.slice(6).join('')}
 
-▢ *JUGADOR 1* ❎ : @${room.game.playerX.split('@')[0]} 
-▢ *JUGADOR 2* ⭕ : @${room.game.playerO.split('@')[0]}
+▢ *ᴊᴜɢᴀᴅᴏʀ 1* ❎ : @${room.game.playerX.split('@')[0]} 
+▢ *ᴊᴜɢᴀᴅᴏʀ 2* ⭕ : @${room.game.playerO.split('@')[0]}
 
-ESCRIBA *surrender* PARA SALIR DEL JUEGOS
+ᴇsᴄʀɪʙᴀ *surrender* ᴘᴀʀᴀ sᴀʟɪʀ ᴅᴇʟ ᴊᴜᴇɢᴏs
 `.trim()
         let users = global.global.db.data.users
         if ((room.game._currentTurn ^ isSurrender ? room.x : room.o) !== m.chat)
