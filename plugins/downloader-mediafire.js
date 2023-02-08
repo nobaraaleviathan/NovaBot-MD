@@ -16,12 +16,18 @@ let handler = async (m, { conn, args, usedPrefix, command, isOwner, isPrems }) =
     let { url, url2, filename, ext, aploud, filesize, filesizeH } = res
     let isLimit = (isPrems || isOwner ? limit : limit) * 1012 < filesize
     let caption = `
-   ≡ *MEDIAFIRE*
-▢ *Nombre:* ${filename}
-▢ *Tamaño:* ${filesizeH}
-▢ *Extension:* ${ext}
-▢ *Subido:* ${aploud}
-${isLimit ? `\n▢ El archivo supera el límite de descarga *+${limit} MB*\nPásate a premium para poder descargar archivos más de *900 MB*` : ''} 
+╭━─━─━─≪💎≫─━─━─━╮
+┆      *MEDIAFIRE*
+┆——————«•»——————
+┆🔸️ *Nombre:* ${filename}
+┆——————«•»——————
+┆🔸️ *Tamaño:* ${filesizeH}
+┆——————«•»——————
+┆🔸️ *Extension:* ${ext}
+┆——————«•»——————
+┆🔸️*Subido:* ${aploud}
+╰━─━─━─≪💎≫─━─━─━╯
+${isLimit ? `\n🔸*️EL ARCHIVO SUPERA EL LIMITE DE DESCARGA* +${limit} MB*\n*PASATE A PREMIUM PARA PODER DESCARGA ARCHIVO PESADO MAS DEL 600 MB*` : ''} 
 `.trim()
     await conn.sendFile(m.chat, ss, 'ssweb.png', caption, m)
     
