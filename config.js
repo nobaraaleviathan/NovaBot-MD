@@ -65,7 +65,7 @@ global.faceb = 'https://facebook.com/groups/872989990425789/'
 
 global.vs = '1.5.0'
 
-global.lb = 'NovaBot-MD'
+global.lb = 'ɴᴏᴠᴀʙᴏᴛ-ᴍᴅ'
 global.lolibot = lb
 
 global.dygp = 'https://chat.whatsapp.com/ImKvcl3Pstb8IMZk02v692' //grupo del bot
@@ -79,7 +79,7 @@ global.maxwarn = '4' // máxima advertencias
 
 //━━━━━━━━━━━━━━━━━━━━ ฅ^•ﻌ•^ฅ
 
-global.wm = 'NovaBot-MD'
+global.wm = 'ɴᴏᴠᴀʙᴏᴛ-ᴍᴅ'
 global.wait = '*⌛ _Cargando..._*\n*▰▰▰▱▱▱▱▱*'
 global.rwait = '⌛'
 global.dmoji = '🤭'
