@@ -88,7 +88,7 @@ await conn.sendButton(m.chat, caption, `𝙏𝙐 𝙉𝙐𝙈𝙀𝙍𝙊 𝘿�
 await m.reply(`${sn}`) 
 }
 handler.help = ['daftar', 'register'].map(v => v + ' <nama>.<umur>')
-handler.tags = ['xp']
+handler.tags = ['rg']
 
 handler.command = /^(verify|verificar|reg(ister)?)$/i
 
