@@ -3,9 +3,9 @@ import fetch from 'node-fetch'
 import axios from 'axios'
 let handler = async (m, { conn, usedPrefix, command }) => {
 	
-	if (!global.db.data.chats[m.chat].nsfw) throw `🚫 El grupo no admite contenido nsfw \n\n Para habilitar escriba \n*${usedPrefix}enable* nsfw`
+	if (!global.db.data.chats[m.chat].nsfw) throw `❌ʟᴏs ᴄᴏᴍᴀɴᴅᴏ ɴsғᴡ ᴇsʀᴀ ᴅᴇsᴀᴄᴛɪᴠᴀᴅᴏ\n\nʟᴏs ᴘᴜᴇᴅᴇ ᴀᴄᴛɪᴠᴀ ᴄᴏɴ ᴇʟ sɪɢᴜɪᴇɴᴛᴇ ᴄᴏᴍᴀɴᴅᴏ\n*${usedPrefix}enable* nsfw`
     let user = global.db.data.users[m.sender].age
-    if (user < 17) throw m.reply(`❎ Eres menor de edad! vuelve cuando tengas más de 18 años`)
+    if (user < 15) throw m.reply(`😐 ᴇʀᴇs ᴍᴇɴᴏʀ ᴅᴇ ᴇᴅᴀᴅ! ᴠᴜᴇʟᴠᴇ ᴄᴜᴀɴᴅᴏ ᴛᴇɴɢᴀs ᴍᴀs ᴅᴇ 15 ᴀñᴏs`)
    
    m.react(rwait)
 let type = (command).toLowerCase()
@@ -17,7 +17,7 @@ switch (type) {
         if (!xwai.ok) throw await xwai.text()
         let xwfu = await xwai.json()
         if (!xwfu.url) throw '❎ Error'
-        conn.sendButton(m.chat, `✅ Random *${command}*`, fgyt, xwfu.url, [[`▷▷ SIGUIENTE`, `${usedPrefix + command}`]], m)
+        conn.sendButton(m.chat, `🥵 Random *${command}*`, fgyt, xwfu.url, [[`▷▷ sɪɢᴜɪᴇɴᴛᴇ`, `${usedPrefix + command}`]], m)
        m.react(xmoji)    
   break
 
@@ -27,7 +27,7 @@ case 'trap':
     if (!res.ok) throw await res.text()
     let json = await res.json()
     if (!json.url) throw '❎ Error'
-    conn.sendButton(m.chat, `✅ Random *${command}*`, fgyt, json.url, [[`▷▷ SIGUIENTE`, `${usedPrefix + command}`]], m)
+    conn.sendButton(m.chat, `🥵 Random *${command}*`, fgyt, json.url, [[`▷▷ sɪɢᴜɪᴇɴᴛᴇ`, `${usedPrefix + command}`]], m)
    m.react(xmoji) 
 break
 
@@ -35,14 +35,14 @@ case 'yuri':
 case 'cum':
 case 'xneko':
     let as = await (await fetch(global.API('fgmods', `/api/nsfw/nime/${command}`, { }, 'apikey'))).json()
-   conn.sendButton(m.chat, `✅ Random *${command}*`, fgyt, as.result, [[`▷▷ SIGUIENTE`, `${usedPrefix + command}`]], m)
+   conn.sendButton(m.chat, `🥵 Random *${command}*`, fgyt, as.result, [[`▷▷ sɪɢᴜɪᴇɴᴛᴇ`, `${usedPrefix + command}`]], m)
    m.react(xmoji) 
 break
 
 case 'hentai':
     let he = pickRandom(['yuri', 'cum', 'xneko', 'blowjob', 'ass', 'pussy'])
     let les = await (await fetch(global.API('fgmods', `/api/nsfw/nime/${he}`, { }, 'apikey'))).json()
-   conn.sendButton(m.chat, `✅ Random *${command}*`, fgyt, les.result, [[`▷▷ SIGUIENTE`, `${usedPrefix + command}`]], m)
+   conn.sendButton(m.chat, `😈  Random *${command}*`, fgyt, les.result, [[`▷▷ sɪɢᴜɪᴇɴᴛᴇ`, `${usedPrefix + command}`]], m)
    m.react(xmoji) 
 break
 
