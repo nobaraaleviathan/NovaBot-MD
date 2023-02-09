@@ -7,12 +7,11 @@ const owner = groupMetadata.owner || groupAdmins.find(p => p.admin === 'superadm
 let text = `
 ╔══✪〘 *sᴛᴀғғ* 〙✪══
 ╠ ɪɴᴠᴏᴄᴀɴᴅᴏ ᴀᴅᴍɪɴs:
-╠ _${groupMetadata.subject}_
-╠ 
-╠      *ᴀᴅᴍɪɴs*
+╠ ➥ ɢʀᴜᴘᴏs _${groupMetadata.subject}_
+╠  ᴀᴅᴍɪɴs
 ╠ 🔸️ ${listAdmin}
 ╚═〘 _*NovaBot-MD*_ 〙
-*[ ⚠ ️] ᴜsᴀʀ ᴇsᴛᴇ ᴄᴏᴍᴀɴᴅᴏ sᴏʟᴏ ᴄᴜᴀɴᴅᴏ sᴇ ᴛʀᴀᴛᴇ ᴅᴇ ᴜɴᴀ ᴇᴍᴇʀɢᴇɴᴄɪᴀ
+[ ⚠ ️] ᴜsᴀʀ ᴇsᴛᴇ ᴄᴏᴍᴀɴᴅᴏ sᴏʟᴏ ᴄᴜᴀɴᴅᴏ sᴇ ᴛʀᴀᴛᴇ ᴅᴇ ᴜɴᴀ ᴇᴍᴇʀɢᴇɴᴄɪᴀ
 `.trim()
 conn.sendFile(m.chat, pp, 'staff.png', text, m, false, { mentions: [...groupAdmins.map(v => v.id), owner] })
 }
