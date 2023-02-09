@@ -22,17 +22,22 @@ year: 'numeric'
 let _uptime = process.uptime() * 1000
 let uptime = clockString(_uptime) 
 
+
 const sections = [  
 {
 title: `ɴᴏᴠᴀʙᴏᴛ-ᴍᴅ ✨ sᴇʟᴇᴄᴄɪᴏɴᴇs ᴀǫᴜɪ`,
 rows: [
-       {title: "/info", description: "para vez el cuentos grupos esta el bot", rowId: `${usedPrefix}grouplist`},
-        {title: "/creador", description: "numero del creador", rowId: `${usedPrefix}owner`},
-        {title: "/menu completo", description: "para vez la lista del menu completo", rowId: `${usedPrefix}menucompleto`},
-      {title: "/hidetag", description: "Para mencionar a todos con un texto", rowId: `${usedPrefix}hidetag`},
-      {title: "/tagall️", description: "Para mencionar a todos en una lista", rowId: `${usedPrefix}tagall`},
-      {title: "/del", description: "Para eliminar un mensaje del bot", rowId: `${usedPrefix}del`},
-              {title: "/work", description: "para trabaja y ganar xp", rowId: `${usedPrefix}work`},
+       {title: "ɪɴғᴏ", description: "ᴘᴀʀᴀ ᴠᴇᴢ ᴇʟ ᴄᴜᴀɴᴛᴏs ɢʀᴜᴘᴏs ᴇsᴛᴀ ᴇʟ ʙᴏᴛ", rowId: `${usedPrefix}grouplist`},
+        {title: "ᴄʀᴇᴀᴅᴏʀ", description: "ɴᴜᴍᴇʀᴏ ᴅᴇʟ ᴄʀᴇᴀᴅᴏʀ", rowId: `${usedPrefix}owner`},
+        {title: "ᴍᴇɴᴜᴄᴏᴍᴘʟᴇᴛᴏ", description: "ᴘᴀʀᴀ ᴠᴇᴢ ᴛᴏᴅᴀ ʟᴀs ғᴜɴᴄɪᴏɴᴇs ᴅᴇʟ ʙᴏᴛ", rowId: `${usedPrefix}menucompleto`},
+      {title: "ᴇsᴛᴀᴅᴏ", description: "ᴘᴀʀᴀ sᴀʙᴇʀ sɪ ᴇʟ ʙᴏᴛ ᴇsᴛᴀ ᴀᴄᴛɪᴠᴏ", rowId: `${usedPrefix}estado`},
+      {title: "ɢʀᴜᴘᴏs", description: "ǫᴜᴇ ᴍᴜᴇsᴛʀᴀ ʟᴏs ɢʀᴜᴘᴏs ᴏғɪᴄɪᴀʟᴇs ᴅᴇʟ ʙᴏᴛ", rowId: `${usedPrefix}grupos`},
+      {title: "ᴘɪɴɢ", description: "ᴍᴜᴇsᴛᴀ ʟᴀs ᴠᴇʟᴏᴄɪᴅᴀᴅ ᴅᴇʟ ʙᴏᴛ", rowId: `${usedPrefix}ping`},
+      {title: "ᴇɴᴀʙʟᴇ", description: "ᴘᴀʀᴀ ᴀᴄᴛɪᴠᴀ ᴏ ᴅᴇsᴀᴄᴛɪᴠᴀʀ ᴇsᴛᴀ ᴏᴘᴄɪᴏɴᴇs", rowId: `${usedPrefix}enable`},
+      {title: "ʜɪᴅᴇᴛᴀɢ", description: "ᴘᴀʀᴀ ᴍᴇɴᴄɪᴏɴᴀʀ ᴀ ᴛᴏᴅᴏs ᴄᴏɴ ᴜɴ ᴛᴇxᴛᴏ", rowId: `${usedPrefix}hidetag`},
+      {title: "ᴛᴀɢᴀʟʟ", description: "ᴘᴀʀᴀ ᴍᴇɴᴄɪᴏɴᴀʀ ᴀ ᴛᴏᴅᴏs ᴇɴ ᴜɴᴀ ʟɪsᴛᴀ", rowId: `${usedPrefix}tagall`},
+      {title: "ᴅᴇʟ", description: "ᴘᴀʀᴀ ᴇʟɪᴍɪɴᴀʀ ᴜɴ ᴍᴇɴsᴀᴊᴇ", rowId: `${usedPrefix}del`},
+              {title: "ᴡᴏʀᴋ", description: "ᴛʀᴀʙᴀᴊᴀ ʏ ɢᴀɴᴀs ᴇxᴘᴇʀɪᴇɴᴄɪᴀ xᴘ", rowId: `${usedPrefix}work`},
 ]}, ]
 let name = await conn.getName(m.sender)
 const listMessage = {
