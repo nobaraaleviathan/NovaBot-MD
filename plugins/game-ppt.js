@@ -56,7 +56,7 @@ m.reply(`HA PERDIDO! 🤡\n\n👉🏻 TU: ${text}\n👉🏻 EL BOT: ${astro}\n�
 }
 }}
 handler.help = ['ppt']
-handler.tags = ['games']
+handler.tags = ['game']
 handler.register = false
 handler.command = /^(ppt)$/i
 export default handler
