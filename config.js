@@ -5,6 +5,7 @@ import { fileURLToPath } from 'url'
 global.owner = [
   ['56964787183', 'NovaBot-MD', true],
   ['5492266466080'], 
+  ['593968585383'],
   ['5214531173598'] 
 ] //Numeros de owner 
 
