@@ -18,9 +18,9 @@ Trace:
 
 npm manifest: 
   { 
-      "name": "dylux-bot",
+      "name": "NovaBot-MD",
       "version": "2.2.2",
-      "description": "Customizable WhatsApp Bot",
+      "description": "Bot simple con pocos comando",
       "main": "index.js",
       "type": "module",
       "directories": {
@@ -45,16 +45,16 @@ npm manifest:
           "MD",
           "baileys-md"
       ],
-      "homepage": "https://github.com/FG98F/dylux-fg",
+      "homepage": "https://github.com/elrebelde21/NovaBot-MD",
       "author": {
-          "name": "FG98"
+          "name": "elrebelde21"
       },
       "repository": {
           "type": "git",
-          "url": "git+https://github.com/FG98F/dylux-bot.git"
+          "url": "git+https://github.com/elrebelde21/NovaBot-MD.git"
       },
       "bugs": {
-          "url": "https://github.com/FG98F/dylux-bot/issues"
+          "url": "https://github.com/elrebelde21/NovaBot-MD/issues"
       },
       "license": "GPL-3.0-or-later",
       "dependencies": {
