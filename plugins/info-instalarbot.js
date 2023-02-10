@@ -9,7 +9,8 @@ let texto1 = `
 ɴᴏᴠᴀʙᴏᴛ-ᴍᴅ ʏᴀ ᴇsᴛᴀ ʟɪsᴛᴀ ᴘᴀʀᴀ ʟᴀ ɪɴsᴛᴀʟᴀᴄɪᴏɴ 
 
 📌 ᴘᴀsᴏ ᴘᴀʀᴀ ɪɴsᴛᴀʟᴀʀ ᴇʟ ʙᴏᴛ ᴇʟ ᴛᴇʀᴍᴜx
-📌 ᴄᴏᴍᴏ ɪɴsᴛᴀʟᴀʀ ᴇʟ ʙᴏᴛ *ʜᴛᴛᴘs://ʏᴏᴜᴛᴜ.ʙᴇ/13xʙᴄǫ2ɪғɢs*
+📌 ᴄᴏᴍᴏ ɪɴsᴛᴀʟᴀʀ ᴇʟ ʙᴏᴛ: 
+ʜᴛᴛᴘs://ʏᴏᴜᴛᴜ.ʙᴇ/13xʙᴄǫ2ɪғɢs
 📌 ɪɴsᴛᴀʟᴀʀ ᴛᴇʀᴍᴜx ᴅᴇʟ ɢᴏᴏɢʟᴇ 👇
 https://www.mediafire.com/file/t2yaabinm704frd/Termux_118_by_shan.apk/file
 📌 ɴᴇᴄᴇsɪᴛᴀ 2 ᴄᴇʟᴜʟᴀʀᴇs ᴏ 1 ᴄᴇʟᴜ ʏ ᴜɴᴀ ᴘᴄ sᴏʟᴏ ᴘᴀʀᴀ ᴇsᴄᴀɴᴇᴀ ᴇʟ ǫʀ
@@ -35,7 +36,7 @@ https://www.mediafire.com/file/t2yaabinm704frd/Termux_118_by_shan.apk/file
 
 📌 *https://chat.whatsapp.com/JESaesjOEcB6wnGX0QYT9o*
 
- ᴏ ᴇsᴄʀɪʙɪᴍᴇ ᴀʟ wa.me/56964787183*
+ ᴏ ᴇsᴄʀɪʙɪᴍᴇ ᴀʟ wa.me/56964787183
  sᴏʟᴏ ᴘᴏʀ ᴛᴇᴍᴀ ᴅᴇʟ ʙᴏᴛ`
 let buttonMessage= {
 'document': { url: `https://youtu.be/13xBCq2ifGs` },
@@ -56,7 +57,7 @@ let buttonMessage= {
 'caption': texto1,
 'footer': wm,
 'buttons':[
-{buttonId: `${usedPrefix}menu`, buttonText: {displayText: '✳️Menu✳️'}, type: 1}],
+{buttonId: `${usedPrefix}menu`, buttonText: {displayText: '✳️ MENU ✳️'}, type: 1}],
 'headerType': 6 }
 conn.sendMessage(m.chat, buttonMessage, { quoted: m })}
 handler.command = /^(instalarbot|instalarbot)$/i
