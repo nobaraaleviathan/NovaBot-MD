@@ -3,10 +3,10 @@ import chalk from 'chalk'
 import { fileURLToPath } from 'url'
 
 global.owner = [
-  ['56964787183', 'NovaBot-MD', true],
-  ['5492266466080'], 
+  ['5492266466080', 'NovaBot-MD', true],
   ['593968585383'],
-  ['5214531173598'] 
+  ['5214531173598'],
+  ['50495745934']
 ] //Numeros de owner 
 
 //━━━━━━━━━━━━━━━━━━━━ ฅ^•ﻌ•^ฅ
