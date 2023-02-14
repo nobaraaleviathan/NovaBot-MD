@@ -23,6 +23,7 @@ let handler = async (m, { conn, usedPrefix, command}) => {
   handler.help = ['rob']
   handler.tags = ['econ']
   handler.command = ['robar', 'rob']
+  handler.register = true
   
   export default handler
   

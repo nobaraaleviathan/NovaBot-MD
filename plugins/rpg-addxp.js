@@ -27,6 +27,7 @@ handler.help = ['addxp <@user>']
 handler.tags = ['econ']
 handler.command = ['addxp'] 
 handler.rowner = true
+handler.register = true
 
 export default handler
 

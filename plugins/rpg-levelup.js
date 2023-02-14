@@ -63,5 +63,6 @@ try {
 handler.help = ['levelup']
 handler.tags = ['econ']
 handler.command = ['nivel', 'lvl', 'levelup', 'level'] 
+handler.register = true
 
 export default handler

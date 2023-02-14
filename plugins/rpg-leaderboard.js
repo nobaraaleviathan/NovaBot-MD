@@ -37,7 +37,7 @@ ${sortedLevel.slice(0, len).map(({ jid, level }, i) => `║${i + 1}. ${participa
 handler.help = ['leaderboard']
 handler.tags = ['econ']
 handler.command = ['leaderboard', 'lb', 'top'] 
-
+handler.register = true
 export default handler
 
 function sort(property, ascending = true) {
