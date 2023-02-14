@@ -13,23 +13,22 @@ let handler = async (m, { conn, args, participants }) => {
   let usersLevel = sortedLevel.map(enumGetKey)
   let len = args[0] && args[0].length > 0 ? Math.min(50, Math.max(parseInt(args[0]), 5)) : Math.min(5, sortedExp.length)
   let text = `
-       ≡ *TABLA DE CLASIFICACION*
-    
-▢ *TOP ${len} XP* 🧬
-Tú : *${usersExp.indexOf(m.sender) + 1}* de *${usersExp.length}*
+𝚃𝙰𝙱𝙻𝙰 𝙳𝙴 𝙲𝙻𝙰𝚂𝙸𝙵𝙸𝙲𝙰𝙲𝙸𝙾𝙽
+ 
+╔═❖ *𝚃𝙾𝙿 ${len} 𝚇𝙿* 🧬 
+║𝚃𝚞 : *${usersExp.indexOf(m.sender) + 1}* 𝚍𝚎 *${usersExp.length}*
+${sortedExp.slice(0, len).map(({ jid, exp }, i) => `║${i + 1}. ${participants.some(p => areJidsSameUser(jid, p.id)) ? `(${conn.getName(jid)}) wa.me/` : '@'}${jid.split`@`[0]} ➭ _*𝚡𝚙 ${exp}*_`).join`\n`}
+╚═══════════════  
 
-${sortedExp.slice(0, len).map(({ jid, exp }, i) => `*${i + 1}.* ${participants.some(p => areJidsSameUser(jid, p.id)) ? `(${conn.getName(jid)}) wa.me/` : '@'}${jid.split`@`[0]} ➭ _*XP ${exp}*_`).join`\n`}
+╔═❖ *𝚃𝙾𝙿 ${len} 𝙳𝙸𝙰𝙼𝙰𝙽𝚃𝙴𝚂 💎*
+║𝚃𝚞 : *${usersLim.indexOf(m.sender) + 1}* 𝚍𝚎 *${usersLim.length}*
+${sortedLim.slice(0, len).map(({ jid, diamond }, i) => `║${i + 1}. ${participants.some(p => areJidsSameUser(jid, p.id)) ? `(${conn.getName(jid)}) wa.me/` : '@'}${jid.split`@`[0]} ➭ _*𝙳𝚒𝚊𝚖𝚊𝚗𝚝𝚎𝚜 ${diamond}*_`).join`\n`}
+╚═══════════════
 
-▢ *TOP ${len} DIAMANTES💎* 
-Tú : *${usersLim.indexOf(m.sender) + 1}* de *${usersLim.length}*
-
-${sortedLim.slice(0, len).map(({ jid, diamond }, i) => `*${i + 1}.* ${participants.some(p => areJidsSameUser(jid, p.id)) ? `(${conn.getName(jid)}) wa.me/` : '@'}${jid.split`@`[0]} ➭ _*Diamantes ${diamond}*_`).join`\n`}
-
-▢ *TOP ${len} NIVEL* ⬆️
-Tú : *${usersLevel.indexOf(m.sender) + 1}* de *${usersLevel.length}*
-
-${sortedLevel.slice(0, len).map(({ jid, level }, i) => `*${i + 1}.* ${participants.some(p => areJidsSameUser(jid, p.id)) ? `(${conn.getName(jid)}) wa.me/` : '@'}${jid.split`@`[0]} ➭ _*Nivel ${level}*_`).join`\n`}
-`.trim()
+╔═❖ *𝚃𝙾𝙿 ${len} 𝙽𝙸𝚅𝙴𝙻* ⬆️
+║𝚃𝚞 : *${usersLevel.indexOf(m.sender) + 1}* 𝚍𝚎 *${usersLevel.length}*
+${sortedLevel.slice(0, len).map(({ jid, level }, i) => `║${i + 1}. ${participants.some(p => areJidsSameUser(jid, p.id)) ? `(${conn.getName(jid)}) wa.me/` : '@'}${jid.split`@`[0]} ➭ _*𝙽𝚒𝚟𝚎𝚕 ${level}*_`).join`\n`}
+╚═══════════════`.trim()
   conn.reply(m.chat, text, m, {
     mentions: [...usersExp.slice(0, len), ...usersLim.slice(0, len), ...usersLevel.slice(0, len)].filter(v => !participants.some(p => areJidsSameUser(v, p.id) )) 
 })
