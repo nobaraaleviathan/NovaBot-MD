@@ -24,5 +24,6 @@ let handler= async (m, { conn, args, text, usedPrefix, command }) => {
 handler.help = ['igstalk']
 handler.tags = ['downloader']
 handler.command = ['igstalk'] 
+handler.register = true
 
 export default handler

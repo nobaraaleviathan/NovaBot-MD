@@ -61,5 +61,6 @@ handler.tags = ['group']
 handler.command = ['simular', 'simulate'] 
 handler.admin = true
 handler.group = true
+handler.register = true
 
 export default handler

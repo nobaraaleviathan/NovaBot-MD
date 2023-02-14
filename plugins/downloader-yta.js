@@ -27,5 +27,6 @@ handler.help = ['ytmp3 <url>']
 handler.tags = ['downloader']
 handler.command = ['ytmp3', 'fgmp3'] 
 handler.diamond = true
+handler.register = true
 
 export default handler

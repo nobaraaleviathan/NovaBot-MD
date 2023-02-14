@@ -8,5 +8,5 @@ function handler(m) {
 handler.help = ['owner']
 handler.tags = ['main']
 handler.command = ['owner', 'creator', 'creador', 'dueño', 'fgowner'] 
-
+handler.register = true
 export default handler

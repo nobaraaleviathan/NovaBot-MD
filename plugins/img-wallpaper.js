@@ -20,5 +20,6 @@ handler.help = ['wallpaper']
 handler.tags = ['img']
 handler.command = ['wallpaper', 'wallpapers', 'wp']
 handler.diamond = true
+handler.register = true
 
 export default handler

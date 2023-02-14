@@ -7,12 +7,14 @@ let handler = async (m, { conn }) => {
     if (!canLevelUp(user.level, user.exp, global.multiplier)) {
         let { min, xp, max } = xpRange(user.level, global.multiplier)
         let txt = `
-┌───⊷ *NIVEL*
-▢ Nombre : *${name}*
-▢ Nivel : *${user.level}*
-▢ XP : *${user.exp - min}/${xp}*
-▢ Rango : *${user.role}*
-└──────────────
+╭━─━─━─≪🔆≫─━─━─━╮
+│ *NIVEL*
+│◤━━━━━ ☆. ∆ .☆ ━━━━━◥
+│🔸Nombre : *${name}*
+│🔸Nivel : *${user.level}*
+│🔸XP : *${user.exp - min}/${xp}*
+│🔸Rango : *${user.role}*
+╰━─━─━─≪🔆≫─━─━─━╯
 
 Te falta *${max - user.exp}* de *XP* para subir de nivel
 `.trim()
@@ -37,11 +39,13 @@ try {
     	user.role = global.rpg.role(user.level).name
 
         let str = `
-┌─⊷ *LEVEL UP*
-▢ Nivel anterior : *${before}*
-▢ Nivel actual : *${user.level}*
-▢ Rango : *${user.role}*
-└──────────────
+╭━─━─━─≪🔆≫─━─━─━╮
+│ *LEVEL UP*
+│◤━━━━━ ☆. ∆ .☆ ━━━━━◥
+│🔸Nivel anterior : *${before}*
+│🔸Nivel actual : *${user.level}*
+│🔸Rango : *${user.role}*
+╰━─━─━─≪🔆≫─━─━─━╯
 
 *_Cuanto más interactúes con los bots, mayor será tu nivel_*
 `.trim()

@@ -26,5 +26,5 @@ handler.help = ['google']
 handler.tags = ['tools']
 handler.command = ['google'] 
 handler.diamond = true
-
+handler.register = true
 export default handler

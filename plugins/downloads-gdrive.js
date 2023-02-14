@@ -26,5 +26,6 @@ handler.tags = ['downloader']
 handler.command = ['gdrive']
 handler.diamond = true
 handler.premium = true
+handler.register = true
 
 export default handler

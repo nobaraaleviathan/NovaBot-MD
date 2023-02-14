@@ -11,5 +11,6 @@ handler.tags = ['group']
 handler.command = ['setbye'] 
 handler.admin = true
 handler.owner = false
+handler.register = true
 
 export default handler

@@ -15,6 +15,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
 handler.help = ['runtime']
 handler.tags = ['main']
 handler.command = ['runtime', 'uptime', 'estado']
+handler.register = true
 export default handler
 
 function clockString(ms) {

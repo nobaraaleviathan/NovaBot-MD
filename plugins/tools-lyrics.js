@@ -20,5 +20,5 @@ m.react(done)
 handler.help = ['lyrics']
 handler.tags = ['tools']
 handler.command = ['letra', 'lyrics', 'letras'] 
-
+handler.register = true
 export default handler

@@ -13,5 +13,6 @@ handler.help = ['meme']
 handler.tags = ['img']
 handler.command = ['meme', 'memes'] 
 handler.diamond = true
+handler.register = true
 
 export default handler

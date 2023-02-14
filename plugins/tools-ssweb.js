@@ -14,5 +14,5 @@ handler.help = ['ssweb <url>']
 handler.tags = ['tools']
 handler.command = ['ssweb', 'ss', 'captura'] 
 handler.diamond = true
-
+handler.register = true
 export default handler

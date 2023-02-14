@@ -20,6 +20,7 @@ handler.help = ['imagen']
 handler.tags = ['img']
 handler.command = /^(img|image|gimage|imagen)$/i
 handler.diamond = true
+handler.register = true
 
 export default handler
 

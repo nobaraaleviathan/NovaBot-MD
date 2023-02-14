@@ -26,12 +26,7 @@ let handler = async(m, { conn, usedPrefix, command }) => {
 *┃* *https://facebook.com/groups/872989990425789/*
 *┃* ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 *┃*  *ᴀɢʀᴀᴄɪᴍɪᴇɴᴛᴏs:*
-*┃* *ᴛʜᴇ-ʟᴏʟɪʙᴏᴛ-ᴍᴅ ᴛɪᴇɴᴇ ғᴜɴᴄɪᴏɴᴇs ǫᴜᴇ ᴘᴇʀᴛᴇɴᴇᴢᴄᴀɴ*
-*┃* *ᴀ ʟᴀs sɪɢᴜᴇɴᴛᴇs ᴇᴍᴘʀᴇsᴀ(s)|ᴏʀɢᴀɴɪᴢᴀᴄɪᴏɴ(ᴇs)*
-*┃* *ᴘᴇʀsᴏɴᴀ(s):*
-*┃* ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-*┃* *ᴛʜᴇᴍʏsᴛɪᴄ-ʙᴏᴛ-ᴍᴅ*
-*┃* *https://github.com/BrunoSobrino*
+*┃* *agradecimiento al 
 *┃* ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 *┃* *ɢᴀᴛᴀʙᴏᴛ-ᴍᴅ*
 *┃* *https://github.com/GataNina-Li/GataBot-MD*
@@ -45,5 +40,5 @@ conn.sendButton(m.chat, don, 'Haga click en boton si quiere comprar o alquilar a
 handler.help = ['donate']
 handler.tags = ['main']
 handler.command = ['apoyar', 'donate', 'donar'] 
-
+handler.register = true
 export default handler

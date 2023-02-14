@@ -18,5 +18,6 @@ handler.help = ['afk <razon>']
 handler.tags = ['fun']
 handler.command = ['afk']
 handler.group = true
+handler.register = true
 
 export default handler

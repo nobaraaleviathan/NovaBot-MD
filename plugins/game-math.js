@@ -32,6 +32,7 @@ _📌𝙴𝚓𝚎𝚖𝚙𝚕𝚘 : ${usedPrefix+command} normal_
 }
 handler.help = ['Mates <modo>']
 handler.tags = ['game']
+handler.register = true
 handler.command = ['mates', 'mate', 'matemáticas', 'math'] 
 
  

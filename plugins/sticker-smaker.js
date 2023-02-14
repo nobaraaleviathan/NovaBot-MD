@@ -34,5 +34,5 @@ handler.help = ['smaker']
 handler.tags = ['sticker']
 handler.command = ['stickmaker', 'stickermaker', 'smaker'] 
 handler.diamond = true
-
+handler.register = true
 export default handler

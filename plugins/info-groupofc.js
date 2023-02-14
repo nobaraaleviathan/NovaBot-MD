@@ -44,5 +44,6 @@ sɪ ǫᴜɪᴇʀᴇs ǫᴜᴇ ᴛᴜ ɢʀᴜᴘᴏ ᴀᴘᴀʀᴇᴢᴄᴀɴ ᴀ
 handler.help = ['support']
 handler.tags = ['main']
 handler.command = ['grupos', 'groupnova', 'dxgp', 'dygp', 'gpdynova', 'support'] 
+handler.register = true
 
 export default handler

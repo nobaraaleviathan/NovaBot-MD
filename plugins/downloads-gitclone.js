@@ -16,5 +16,6 @@ handler.help = ['gitclone <url>']
 handler.tags = ['downloader']
 handler.command = ['gitclone'] 
 handler.diamond = true
+handler.register = true
 
 export default handler

@@ -14,5 +14,6 @@ handler.help = ['toav']
 handler.tags = ['fun']
 
 handler.command = ['toav', 'tovn'] 
+handler.register = true
 
 export default handler

@@ -31,5 +31,6 @@ handler.help = ['tiktok']
 handler.tags = ['downloader']
 handler.command = /^(tiktok|ttdl|tiktokdl|tiktoknowm)$/i
 handler.diamond = true
+handler.register = true
 
 export default handler

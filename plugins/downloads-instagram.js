@@ -14,5 +14,6 @@ handler.help = ['instagram <link ig>']
 handler.tags = ['downloader']
 handler.command = ['ig', 'igdl', 'instagram', 'igimg', 'igvid'] 
 handler.diamond = true
+handler.register = true
 
 export default handler 

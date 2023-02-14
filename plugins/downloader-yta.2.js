@@ -27,4 +27,5 @@ await conn.reply(m.chat, '*[❗]ᴇʀʀᴏʀ, ɴᴏ sᴇ ᴘᴜᴅᴏ ᴅᴇsᴄ
 }}
 handler.tags = ['downloader']
 handler.command = /^ytmp3doc|ytadoc|ytmp3.2|yta.2$/i
+handler.register = true
 export default handler

@@ -24,5 +24,6 @@ handler.help = ['facebook'].map(v => v + ' <url>')
 handler.tags = ['downloader']
 handler.command = /^((facebook|fb)(downloder|dl)?)$/i
 handler.diamond = true
+handler.register = true
 
 export default handler

@@ -67,5 +67,6 @@ conn.sendButton(m.chat, infobt, fgig, null, [
 handler.help = ['info']
 handler.tags = ['main']
 handler.command = ['info', 'infobot', 'botinfo']
+handler.register = true
 
 export default handler

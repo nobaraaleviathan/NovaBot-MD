@@ -44,5 +44,6 @@ let str = `┏─━─━─━∞◆∞━─━─━─┓
 handler.help = ['perfil']
 handler.tags = ['group']
 handler.command = ['profile', 'perfil'] 
+handler.register = true
 
 export default handler

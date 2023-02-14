@@ -22,6 +22,6 @@ ${resulw}`)
 handler.help = ['wikipedia']
 handler.tags = ['tools']
 handler.command = ['wiki','wikipedia'] 
-
+handler.register = true
 
 export default handler

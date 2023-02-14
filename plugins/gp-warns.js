@@ -17,5 +17,6 @@ handler.help = ['warns']
 handler.tags = ['group']
 handler.command = ['warns'] 
 handler.group = true
+handler.register = true
 
 export default handler

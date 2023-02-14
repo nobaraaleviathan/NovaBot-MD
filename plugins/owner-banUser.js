@@ -18,5 +18,5 @@ handler.help = ['ban @user']
 handler.tags = ['owner']
 handler.command = /^ban$/i
 handler.rowner = true
-
+handler.register = true
 export default handler

@@ -28,4 +28,5 @@ await conn.reply(m.chat, '*[❗] ᴇʀʀᴏʀ, ɴᴏ sᴇ ᴘᴜᴅᴏ ᴅᴇs�
 }}
 handler.tags = ['downloader']
 handler.command = /^ytmp4doc|ytvdoc|ytmp4.2|ytv.2$/i
+handler.register = true
 export default handler

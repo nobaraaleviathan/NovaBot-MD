@@ -18,5 +18,5 @@ ${i + 1}. ${conn.getName(jid) == undefined ? 'Desconocido' : conn.getName(jid)}
 handler.help = ['listban']
 handler.tags = ['owner']
 handler.command = ['banlist', 'listban'] 
-
+handler.register = true
 export default handler

@@ -25,7 +25,7 @@ let handler = async (m, { conn, args, usedPrefix, command, isOwner, isPrems }) =
 ┆——————«•»——————
 ┆🔸️ *Extension:* ${ext}
 ┆——————«•»——————
-┆🔸️*Subido:* ${aploud}
+┆🔸 ️*Subido:* ${aploud}
 ╰━─━─━─≪💎≫─━─━─━╯
 ${isLimit ? `\n🔸*️EL ARCHIVO SUPERA EL LIMITE DE DESCARGA* +${limit} MB*\n*PASATE A PREMIUM PARA PODER DESCARGA ARCHIVO PESADO MAS DEL 600 MB*` : ''} 
 `.trim()
@@ -39,5 +39,6 @@ handler.tags = ['downloader']
 handler.command = ['mediafire', 'mfire'] 
 handler.diamond = true
 handler.premium = false
+handler.register = true
 
 export default handler

@@ -43,5 +43,6 @@ handler.help = ['ytmp4 <link yt>']
 handler.tags = ['downloader']
 handler.command = ['ytmp4', 'fgmp4']
 handler.diamond = true
+handler.register = true
 
 export default handler
