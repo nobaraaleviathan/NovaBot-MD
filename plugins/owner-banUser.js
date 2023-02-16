@@ -8,15 +8,11 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
     if (!who) throw `✳️ Etiqueta o menciona a alguien\n\n📌 Ejemplo : ${usedPrefix + command} @user`
     let users = global.db.data.users
     users[who].banned = true
-    conn.reply(m.chat, `
-✅ BANEADO
-
-───────────
-@${who.split`@`[0]} ya  no podrá  usar  mis comandos `, m, { mentions: [who] })
+    conn.reply(m.chat, `usuarios @${who.split`@`[0]} Baneado ya no podrá usar mis comandos `, m, { mentions: [who] })
 }
 handler.help = ['ban @user']
 handler.tags = ['owner']
 handler.command = /^ban$/i
-handler.rowner = true
+handler.admin = true
 handler.register = true
 export default handler
