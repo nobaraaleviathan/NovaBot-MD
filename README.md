@@ -95,3 +95,4 @@ NovaBot-MD todavía no está terminado bot el desarrollo✨
 [![Misaelsharkbot](https://github.com/Misaelsharkbot.png?size=100)](https://github.com/Misaelsharkbot)
 [![Azamiwithlogic](https://github.com/AzamiWithLogic.png?size=100)](https://github.com/AzamiWithlogic)
 [![antonio32114](https://github.com/Antonio32114.png?size=100)](https://github.com/Antonio32114)
+[![OFC-YOVANI](https://github.com/OFC-YOVANI.png?size=100)](https://github.com/OFC-YOVANI)
