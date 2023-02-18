@@ -13,7 +13,7 @@ m.reply(`
 https://chat.whatsapp.com/CcJKHrxGBWAAH3PiBL07JS
 
 ɢʀᴜᴘᴏ ᴅᴇʟ ᴄᴏʟ ² (ᴀǫᴜɪ sᴇ ᴘᴇʀᴍɪᴛᴇ ᴛᴏᴅᴏ ʟᴏs ᴄᴏᴍᴀɴᴅᴏs ᴅᴇʟ ʙᴏᴛ)
-https://chat.whatsapp.com/CypX2VF70QZI09Nq0XUKPn
+https://chat.whatsapp.com/FfiQUYDDtaG9bwaI7UKMAR
 
 ɪɴғᴏᴍᴀʀᴛᴇ sᴏʙʀᴇ ʟᴀs ɴᴜᴇᴠᴀs ᴀᴄᴛᴜᴀʟɪᴢᴀᴄɪᴏɴᴇs ᴅᴇʟ ʙᴏᴛ ᴀǫᴜɪ 
 https://chat.whatsapp.com/JESaesjOEcB6wnGX0QYT9o
