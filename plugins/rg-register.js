@@ -72,15 +72,18 @@ const listMessage = {
   let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : m.fromMe ? conn.user.jid : m.sender
 global.db.data.users[m.sender].limit += 5
 global.db.data.users[m.sender].exp += 400
-  let caption = `┏─━─━─━∞ ʀᴇɢɪsᴛʀᴀᴅᴏ ∞━─━─━─┓
+  let caption = `┏──━∞ *ʀᴇɢɪsᴛʀᴀᴅᴏ* ∞─━─┓
 ┃ *ɴᴏᴍʙʀᴇ* 
 ┃➠ ${name}
 ┃• • • • • • • • • • • • • • • • • • •
-┃*ᴇᴅᴀᴅ* 
+┃ *ᴇᴅᴀᴅ*
 ┃➠ ${age} años
+┃• • • • • • • • • • • • • • • • • • •
+┃ *ɴᴜᴍᴇʀᴏ ᴅᴇ sᴇʀɪᴇ*
+┃➠ ${sn}
 ┗─━─━─━∞◆∞━─━─━─┛`
 //let author = global.author
-await conn.sendButton(m.chat, caption, `ᴛᴜ ɴᴜᴍᴇʀᴏ ᴅᴇ sᴇʀɪᴇ ᴛᴇ sᴇʀᴠɪʀᴀ ᴇɴ ᴄᴀsᴏ ǫᴜᴇ ǫᴜɪᴇʀᴀ ʙᴏʀʀᴀʀ sᴜ ʀᴇɢɪsᴛʀᴏ\nᴇᴊᴇᴍᴘʟᴏ\n${usedPrefix}unreg ɴᴜᴍᴇʀᴏ ᴅᴇ sᴇʀɪᴇ\n${wm}`, [['ᴠᴇʀɪғᴀᴄᴀᴅᴏ(ᴀ)!! ✅', '/profile']], m)
+await conn.sendButton(m.chat, caption, `ᴛᴜ ɴᴜᴍᴇʀᴏ ᴅᴇ sᴇʀɪᴇ ᴛᴇ sᴇʀᴠɪʀᴀ ᴇɴ ᴄᴀsᴏ ǫᴜᴇ ǫᴜɪᴇʀᴀ ʙᴏʀʀᴀʀ sᴜ ʀᴇɢɪsᴛʀᴏ\nᴇᴊᴇᴍᴘʟᴏ ${usedPrefix}unreg ɴᴜᴍᴇʀᴏ ᴅᴇ sᴇʀɪᴇ\n${wm}`, [['ᴠᴇʀɪғᴀᴄᴀᴅᴏ(ᴀ)!! ✅', '/profile']], m)
 await m.reply(`${sn}`) 
 }
 handler.help = ['daftar', 'register'].map(v => v + ' <nama>.<umur>')
